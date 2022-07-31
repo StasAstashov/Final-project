@@ -17,7 +17,7 @@ class BasePage():
         self.browser.implicitly_wait(timeout)
 
     def go_to_basket(self):
-        cart_button = self.browser.find_element(*BasketLocators.Busket_Button)
+        cart_button = self.browser.find_element(*BasePageLocators.Busket_Button)
         cart_button.click()
 
     def go_to_login_page(self):
@@ -74,7 +74,9 @@ class BasePage():
        except NoAlertPresentException:
          print("No second alert presented")
 
-
+    def should_be_authorized_user(self):
+       assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                 " probably unauthorised user"
 
     def open(self): 
      self.browser.get(self.url)
