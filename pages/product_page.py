@@ -11,9 +11,11 @@ class ProductPage (BasePage):
         Prod_Name_Cart = self.browser.find_element(*ProductPageLocators.Product_Name_Cart)
         PNC = Prod_Name_Cart.text
         assert PN == PNC, "Имена совпадают" 
+
     def go_to_cart(self):    
         cart_button = self.browser.find_element(*ProductPageLocators.Cart_Button)
         cart_button.click()
+        
     def math_checking(self):    
         self.solve_quiz_and_get_code()
 

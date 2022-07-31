@@ -1,6 +1,7 @@
 from sre_constants import SUCCESS
 import pytest
 from pages.product_page import ProductPage
+from pages.main_page import MainPage
 import time
 
 # @pytest.mark.parametrize('link', [0, 1, 2, 3, 4, 5, 6,
@@ -48,3 +49,4 @@ def test_guest_can_go_to_login_page_from_product_page(browser):
     page = ProductPage(browser, link)
     page.open()
     page.go_to_login_page()
+

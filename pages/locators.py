@@ -19,3 +19,8 @@ class ProductPageLocators():
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     #LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")   
+
+class BasketLocators():
+    Busket_Button = (By.CSS_SELECTOR, " div.basket-mini.pull-right.hidden-xs  span  a")
+    Busket_Item = (By.CSS_SELECTOR, "#content_inner p a")
+    Busket_Item1 = (By.CSS_SELECTOR,"div.sub-header h2" )
