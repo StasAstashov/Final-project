@@ -1,3 +1,4 @@
+from sre_constants import SUCCESS
 from selenium.webdriver.common.by import By
 
 
@@ -13,3 +14,4 @@ class ProductPageLocators():
     Product_Name_Cart = (By.CSS_SELECTOR, "div.alertinner strong")
     Product_Price = (By.CSS_SELECTOR, ".product_main .price_color")
     Product_Price_Cart = (By.CSS_SELECTOR, ".alert-info .alertinner strong")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alert-success")
